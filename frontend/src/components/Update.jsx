@@ -9,7 +9,7 @@ const Update = () => {
   const [error, setError] = useState("");
   const { id } = useParams();
   const getSingleUser = async () => {
-    const response = await fetch(`http://localhost:5000/${id}`);
+    const response = await fetch(`http://localhost:5000/api/users/${id}`);
     const result = await response.json();
 
     if (!response.ok) {
